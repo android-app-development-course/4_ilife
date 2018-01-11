@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:id="@+id/outAndIn"
+        android:layout_marginTop="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/expense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本月支出"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/expenseNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="504.00"
+                android:textSize="35sp"
+                android:textColor="#000000"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="80dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本月收入"
+                android:textSize="20sp"
+                android:textColor="#000000"/>
+            <TextView
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/incomeNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="800.00"
+                android:textSize="35sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/budget"
+        android:layout_below="@id/outAndIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#000000"
+            android:id="@+id/budgetLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预算剩余："
+            android:textSize="18sp"
+            />
+        <TextView
+            android:textColor="#000000"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/budgetLeftNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1050"
+            android:textSize="18sp"/>
+        <Button
+            android:id="@+id/changeBudget"
+            android:layout_marginLeft="20dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/edit"
+            android:backgroundTint="@android:color/black"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/all"
+        android:layout_below="@id/budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#000000"
+            android:id="@+id/allMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  总资产  ："
+            android:textSize="18sp"
+            />
+        <TextView
+            android:textColor="#000000"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/allMoneyNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2160"
+            android:textSize="18sp"/>
+        <ImageView
+            android:id="@+id/changeAllMoney"
+            android:layout_marginLeft="20dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/edit"
+            android:backgroundTint="@color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/all"
+        android:layout_marginTop="55dp">
+        <Button
+            style="@style/moneyButton"
+            android:id="@+id/add"
+            android:drawableLeft="@drawable/ic_action_write"
+            android:drawableTint="@color/dark_green"
+            android:text="  记一笔账 "
+            />
+
+
+
+
+
+        <Button
+            android:id="@+id/check"
+            style="@style/moneyButton"
+            android:layout_below="@id/add"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_action_accountbook"
+            android:text="  查看账本 "
+            android:drawableTint="@color/dark_blue" />
+
+        <Button
+            style="@style/moneyButton"
+            android:id="@+id/chart"
+            android:drawableTint="@color/dark_orange"
+            android:layout_below="@id/check"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_action_chart"
+            android:text="  查看报表 "
+            />
+    </LinearLayout>
+
+</RelativeLayout>

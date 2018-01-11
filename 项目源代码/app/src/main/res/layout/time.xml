@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="每日打卡"
+
+        android:textSize="16sp"/>
+    <LinearLayout
+        android:id="@+id/dayButton"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:gravity="center">
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="28dp"
+            android:background="@drawable/round_corner_left"
+            android:text="前天"/>
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="28dp"
+            android:background="@drawable/green_edge"
+            android:text="昨天"/>
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="28dp"
+            android:text="今天"
+            android:background="@drawable/round_corner_right_selected"/>
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+
+        android:id="@+id/tickViewPager"
+        android:background="@drawable/round_corner"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/dayButton"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_height="160dp">
+
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+    android:id="@+id/tv2"
+        android:layout_below="@id/tickViewPager"
+    android:layout_marginTop="30dp"
+    android:layout_marginLeft="15dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="今日备忘"
+    android:textSize="16sp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/tv2"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/round_corner"
+        >
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日无备忘事项"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right">
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/edit"
+                android:backgroundTint="@color/light_gray"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/button"
+        android:paddingRight="15dp"
+        android:gravity="right"
+        android:layout_marginRight="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="2dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:paddingTop="10dp"
+                android:drawableTint="@color/light_blue"
+                android:id="@+id/tick"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round"
+                android:backgroundTint="@color/light_blue"
+                android:drawableTop="@drawable/ic_action_tick" />
+            <TextView
+
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="打卡"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/noteBtn"
+                android:paddingTop="10dp"
+                android:drawableTint="@color/dark_orange"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round"
+                android:backgroundTint="@color/dark_orange"
+                android:drawableTop="@drawable/ic_action_schedual"
+                />
+            <TextView
+
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="便签"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
+
